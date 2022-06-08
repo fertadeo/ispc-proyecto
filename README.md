@@ -6,7 +6,7 @@
   
 # Presentacion
   
-  <h2 style="color: red;"> <b>HOLA PROFE PONGAME 10 </b> <h2>
+  <h2> ! HOLA PROFE PONGAME 10<h2>
   
 
     
