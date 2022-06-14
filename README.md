@@ -10,6 +10,7 @@
   - Marina Celeste Alari
   - Juan Ignacio García Rampini
   - Fernando Manuel Tadeo Suárez
+  - Federico Musarra 
   Pertenecientes a Aula 6. 
   
   
