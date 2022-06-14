@@ -11,6 +11,7 @@
   - Juan Ignacio García Rampini
   - Fernando Manuel Tadeo Suárez
   - Federico Musarra 
+  - Carolina García Rivas
   Pertenecientes a Aula 6. 
   
   
