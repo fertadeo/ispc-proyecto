@@ -24,3 +24,7 @@
   - En éste repositorio encontrarán el código de nuestro trabajo como también la documentación y comentarios realizados por los estudiantes del grupo.
   
   
+Conceptos básicos SCRUM
+1) **Ceremonias**: 
+2) **Artefactos**
+3) **Roles**
