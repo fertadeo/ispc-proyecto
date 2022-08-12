@@ -5,7 +5,7 @@
       Recorrer la lista “Perro2” con un bucle y mostrar sus elementos por pantalla , 
       comenzando desde el último hasta el primero. """
 
-Perro2 =[14,  "Fido",  "12/12/20122", "Macho", 23546987]
+Perro2 =[14,  "Fido",  "12/12/2012", "Macho", 23546987]
 
 for dato in reversed(Perro2):
      print(dato)
