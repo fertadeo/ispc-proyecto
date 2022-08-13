@@ -51,4 +51,4 @@ VALUES  ( "2021-10-15", 3000, "control", 1),
 
 --Consulta, rta pto 9
 
-UPDATE `duenio` SET `direccion`="Libertad 123" WHERE (`dni` = "37876584");
+UPDATE duenio SET direccion="Libertad 123" WHERE (dni = "37876584");
