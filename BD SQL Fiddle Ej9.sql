@@ -2,6 +2,8 @@
 --        Su nueva dirección es Libertad 123
 -- Consulta en sqlfiddle.com
 
+-- CREATE DATABASE peluCanina;
+-- USE peluCanina;
 CREATE TABLE duenio(
     dni int NOT NULL,
     nombre varchar(50) NOT NULL,
@@ -16,10 +18,9 @@ CREATE TABLE perro(
     name varchar(50) NOT NULL,
     fechaNac date NOT NULL,
     sexo enum("hembra","macho") NOT NULL,
-  constraint pk_c primary key (id_perro),
-   /*fk dniDuenio*/
-  fk_duenio_dni int,
-  constraint pk_f foreign key (fk_duenio_dni) references duenio(dni)
+    constraint pk_c primary key (id_perro),
+    fk_duenio_dni int,
+    constraint pk_f foreign key (fk_duenio_dni) references duenio(dni)
 );
     
 CREATE TABLE historial(
@@ -27,10 +28,9 @@ CREATE TABLE historial(
         fecha date NOT NULL,
         descripcion varchar(150) NOT NULL,
         Monto DECIMAL(16,2) NOT NULL check (monto>=0),
-     constraint pk_h primary key (id_historial),
-     /*fk idPerro*/
-     fk_id_perro int,
-      constraint pk_p foreign key (fk_id_perro) references perro(id_perro)
+        constraint pk_h primary key (id_historial),
+        fk_id_perro int,
+        constraint pk_p foreign key (fk_id_perro) references perro(id_perro)
     );
 
 INSERT INTO duenio(dni,nombre,apellido,telefono,direccion)
@@ -51,4 +51,5 @@ VALUES  ( "2021-10-15", 3000, "control", 1),
 
 --Consulta, rta pto 9
 
+SELECT*FROM duenio
 UPDATE duenio SET direccion="Libertad 123" WHERE (dni = "37876584");
