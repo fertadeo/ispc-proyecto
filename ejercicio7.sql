@@ -1,3 +1,3 @@
 USE database 
-SELECT * FROM  ingresos 
-WHERE mes = 'julio' AND WHERE year = 2022
+SELECT monto FROM historial
+WHERE fecha BETWEEN '2022-07-01' AND '2022-07-31'
