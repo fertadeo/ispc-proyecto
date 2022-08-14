@@ -1,6 +1,22 @@
-CREATE SCHEMA IF NOT EXISTS `peluqueria`
-use `peluqueria`
+-- MySQL Workbench Forward Engineering
 
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+
+-- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+USE `mydb` ;
+
+-- -----------------------------------------------------
+-- Table `mydb`.`dueno`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`dueno` (
   `dni` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
@@ -9,7 +25,12 @@ CREATE TABLE IF NOT EXISTS `mydb`.`dueno` (
   `direccion` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`dni`),
   UNIQUE INDEX `dni_UNIQUE` (`dni` ASC) VISIBLE)
+ENGINE = InnoDB;
 
+
+-- -----------------------------------------------------
+-- Table `mydb`.`perro`
+-- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `mydb`.`perro` (
   `id_perro` INT NOT NULL AUTO_INCREMENT,
   `nombre` VARCHAR(45) NOT NULL,
@@ -25,9 +46,13 @@ CREATE TABLE IF NOT EXISTS `mydb`.`perro` (
     REFERENCES `mydb`.`dueno` (`dni`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-    
-    
-    CREATE TABLE IF NOT EXISTS `mydb`.`historial` (
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `mydb`.`historial`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`historial` (
   `id_historial` INT NOT NULL AUTO_INCREMENT,
   `fecha` DATE NOT NULL,
   `descripcion` VARCHAR(100) NOT NULL,
